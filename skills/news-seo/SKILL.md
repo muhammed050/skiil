@@ -1,15 +1,26 @@
 ---
 name: news-seo
-description: Optimize genuine CanliHisse financial news pages for crawlability, freshness, structured data, source attribution, dates, canonical URLs, and user value.
+description: Build trustworthy, crawlable, fresh CanliHisse financial news pages with accurate dates, sources, entities, canonical URLs, structured data, and meaningful editorial value.
 ---
 # News SEO
 
-A news page must have an accurate headline, publication date, update date when applicable, source attribution, meaningful content, correct canonical, and real author information if displayed.
+## Article Integrity
+Every article must have a real headline, real publication time, genuine source attribution where applicable, meaningful content, and a correct canonical URL. Show a real author only when one exists.
 
-Use NewsArticle structured data only when the page genuinely qualifies and all values match visible content.
+## Originality
+Do not copy or lightly rewrite another publisher's article and present it as original reporting. Summaries must preserve meaning and identify the source when appropriate.
 
-Never fabricate breaking news, quotes, events, sources, dates, authors, or market reactions. Do not lightly rewrite another publisher's article and present it as original reporting.
+## Dates
+Publication and update dates must represent real events. Never change dates solely to appear fresh. Preserve historical context.
 
-Keep old news historically accurate. If updated, record a genuine update event rather than changing the date solely for freshness.
+## Structured Data
+Use NewsArticle/Article only when the page genuinely qualifies. Values must match visible content: headline, author, publisher, dates, image, and canonical.
 
-Use relevant internal links to stocks, companies, sectors, and educational pages without keyword stuffing.
+## Entity Connections
+Link relevant stocks, companies, sectors, markets, and educational explanations naturally. Never inject unrelated tickers for SEO.
+
+## Freshness
+Handle breaking, updated, and historical stories differently. If an article is materially updated, record a genuine update event. Broken feeds must not generate fake stories.
+
+## QA
+Verify source, dates, entity identity, canonical, schema, image, indexability, internal links, mobile readability, and duplicate-content risk before publication.

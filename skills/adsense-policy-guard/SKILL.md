@@ -1,30 +1,38 @@
 ---
 name: adsense-policy-guard
-description: Audit and protect CanliHisse against AdSense policy risks, deceptive ad placement, invalid-click patterns, thin ad-first pages, and misleading financial monetization.
+description: Protect CanliHisse from advertising-policy and deceptive-design risks through useful content, clear ad separation, safe placement, transparent sponsorship, and financial-content integrity.
 ---
 # AdSense Policy Guard
 
-## Goal
-Protect user experience, content quality, and advertising compliance without making unsupported legal guarantees.
+## Principle
+Build a useful financial website first. Advertising must never become the reason a page exists or interfere with user tasks.
 
-## Before Changes
-Inspect page purpose, content density, ad locations, mobile layout, CTA hierarchy, and whether ads can be confused with navigation or financial controls.
+## Placement Safety
+Ads must be clearly distinguishable from:
+- navigation
+- stock charts
+- buy/sell controls
+- downloads
+- search controls
+- editorial links
+- buttons
 
-## Rules
-- Never encourage users to click ads.
-- Never make ads resemble buy/sell controls, charts, downloads, navigation, or functional buttons.
-- Keep ads visually distinguishable from editorial content.
-- Avoid accidental-click risk, especially on mobile.
-- Do not create ad-first or empty pages.
-- Do not fabricate traffic, reviews, users, ratings, financial claims, authors, or sources.
-- Clearly disclose sponsored and affiliate relationships.
-- Never promise guaranteed profits or risk-free investing.
+Avoid accidental clicks, especially on mobile. Do not place ads where layout shifts can cause users to click unexpectedly.
 
-## CanliHisse Financial Safety
-Do not combine advertising with misleading investment claims. Keep market information, analysis, editorial content, affiliate material, and advertisements distinguishable.
+## Content Quality
+Do not create ad-first, empty, thin, copied, or mass-generated pages. Every indexable page should have genuine user value independent of advertising.
+
+## Financial Claims
+Never encourage investment through guarantees, risk-free language, fabricated performance, or misleading urgency. Keep ads separate from financial analysis and market data.
+
+## Sponsored/Affiliate
+Clearly label sponsored and affiliate relationships. Never disguise paid placement as an independent ranking, review, or editorial conclusion.
+
+## Invalid Activity Safety
+Never ask users to click ads or imply that clicking helps CanliHisse. Do not design interactions that incentivize accidental or artificial clicks.
 
 ## QA
-Check desktop and mobile layouts, ad/content separation, navigation, CLS, accidental-click risk, and that pages remain useful without interacting with ads.
+Check desktop/mobile placement, content-to-ad balance, CLS, overlays, sticky units, accidental-click paths, labels, and whether the page remains useful with ads ignored.
 
-## Done
-Report affected pages, risks found, changes made, and remaining review items. Never claim AdSense approval is guaranteed.
+## Hard Rule
+This skill can reduce policy risk but cannot guarantee AdSense approval. Follow the actual Google policies applicable to the account and product.

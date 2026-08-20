@@ -1,64 +1,35 @@
 ---
 name: programmatic-seo
-description: Design and operate scalable CanliHisse stock, company, sector, comparison, and category pages with real entity-specific value, strong crawl architecture, and safeguards against thin or duplicate content.
+description: Build scalable CanliHisse programmatic pages that provide unique entity-level value, strong indexability, reliable data, and protection against thin or duplicate content.
 ---
 # Programmatic SEO
 
-## Mission
-Scale useful pages, not URLs. Every generated page must solve a real search need and contain verifiable entity-specific information.
+## Core Rule
+Scale only after one representative page is genuinely useful, technically sound, and data-correct. More URLs do not equal more SEO value.
 
-## Before Creating a Template
-Define:
-- search intent
-- entity type
-- canonical URL pattern
-- required data
-- unique value
-- internal-link role
-- sitemap behavior
-- indexability rules
-- empty/error state
-- update/freshness strategy
+## Page Quality Gate
+Before publishing a generated URL verify:
+- valid entity
+- unique canonical URL
+- correct HTTP status
+- indexable intent
+- useful content beyond a changed keyword
+- verified data
+- meaningful internal links
+- appropriate metadata/schema
+- no duplicate or near-duplicate purpose
 
-## Entity Validation
-Require valid:
-- company name
-- ticker
-- exchange
-- stable identifier
-- sector where applicable
-- source relationship
+## Stock Templates
+Where data exists, useful modules may include company identity, ticker/exchange, verified price status, historical performance, financial metrics, sector, relevant news, related entities, and explanatory content. Missing modules must show honest unavailable states.
 
-Never create a page from an unverified ticker or mismatched API record.
+## Scale Controls
+Do not generate pages for nonexistent tickers, empty entities, meaningless filter combinations, arbitrary query parameters, or thousands of near-identical variations. Use canonicalization/noindex/removal according to the actual URL purpose.
 
-## Stock Page Quality Gate
-A stock page should provide meaningful information beyond a ticker and one price. Depending on available data, include verified price status, change, volume, historical information, financial metrics, company context, sector, related news, related entities, and useful explanations.
+## Pagination and Filters
+Keep indexable URLs intentional. Avoid crawl traps from endless combinations, sorting parameters, session IDs, and duplicate query strings.
 
-If critical data is unavailable, show an honest unavailable state. Do not fill missing fields with invented values.
+## Deployment Safety
+Test a representative sample before mass generation. Validate sitemaps, canonical URLs, metadata, schema, internal links, data identity, and response codes.
 
-## Duplicate Control
-Audit:
-- uppercase/lowercase variants
-- aliases
-- trailing slash variants
-- query parameters
-- filters
-- pagination
-- tracking parameters
-- duplicate entity routes
-
-Choose canonicalization, redirects, noindex, or route constraints based on actual user intent. Do not blanket-noindex useful pages.
-
-## Scale Safely
-Test representative URLs before generating thousands. Check template output, metadata, schema, links, images, HTTP status, canonical, content uniqueness, and data correctness.
-
-Stop generation if the template produces empty, repetitive, invalid, or mismatched pages.
-
-## Thin Content Prevention
-Never mass-create pages containing only a ticker, price, generic paragraph, or repeated boilerplate. Do not publish pages merely because a keyword exists.
-
-## Freshness
-Volatile market data needs accurate update status. Editorial content needs genuine review before an updated date changes.
-
-## Done
-Validate a sample from every page family, plus edge cases and missing-data states. Confirm sitemap and internal discovery behavior and preserve application business logic.
+## Definition of Done
+Programmatic growth is successful only when the generated pages add real searcher value and remain accurate, crawlable, maintainable, and non-duplicative.

@@ -1,17 +1,32 @@
 ---
 name: internal-linking
-description: Build a useful, scalable internal-link architecture for CanliHisse that improves discovery, topical relationships, and user navigation without link spam.
+description: Design and audit a scalable, contextual internal-link architecture for CanliHisse stock, company, sector, market, news, and educational pages.
 ---
 # Internal Linking
 
-Model the site as Home → Categories → Sectors → Companies → Stocks → News/Analysis/Education.
+## Architecture
+Use a clear hierarchy such as Home → Market/Category → Sector → Company/Stock → News/Analysis/Education.
 
-Use contextual links between stock/company, stock/sector, related stocks, relevant news, educational guides, and entities. Prefer descriptive natural anchor text.
+## Link Targets
+Prioritize important pages that users genuinely need:
+- company ↔ stock
+- stock ↔ sector
+- stock ↔ related stocks
+- stock ↔ relevant news
+- article ↔ referenced entities
+- education ↔ related concepts
 
-Important pages must be reachable through normal HTML links and must not become orphan pages.
+## Rules
+Use descriptive natural anchors. Links must be contextually relevant. Avoid keyword-stuffed anchors, sitewide link spam, repeated identical links, hidden links, and artificial link networks.
 
-Avoid excessive repeated links, irrelevant links, automatic link blocks, keyword-stuffed anchors, and artificial networks.
+## Orphan Prevention
+Every important indexable page should be reachable through meaningful internal navigation. Detect orphan pages and low-value crawl paths.
 
-For programmatic pages, generate links from verified relationships rather than arbitrary lists.
+## Programmatic Pages
+Do not automatically link every stock to every other stock. Generate relationships from verified sector, exchange, company, news, or relevance data.
 
-After changes, inspect representative pages for broken links, orphan patterns, excessive link density, and useful crawl paths.
+## Crawl and UX
+Keep important links in crawlable HTML. Do not rely solely on client-side interactions for discovery. Ensure mobile navigation remains usable.
+
+## QA
+Audit representative templates, link counts, anchor distribution, destination status, canonical consistency, and relevance. Remove links to redirects, dead pages, or unrelated content.

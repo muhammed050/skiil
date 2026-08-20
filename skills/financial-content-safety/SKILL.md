@@ -1,17 +1,27 @@
 ---
 name: financial-content-safety
-description: Keep CanliHisse financial information factual, cautious, timestamped, and free of guaranteed-return or misleading investment claims.
+description: Keep CanliHisse financial information factual, cautious, transparent about uncertainty, and clearly separated from investment advice or promotional claims.
 ---
 # Financial Content Safety
 
-Clearly separate market data, historical facts, analysis, commentary, opinion, education, and promotion.
+## Rules
+- Never guarantee returns or future prices.
+- Never call an investment risk-free or certain.
+- Separate verified market facts from analysis, forecasts, opinion, and promotion.
+- State when data is live, delayed, historical, or unavailable.
+- Use exact dates and source context for changing information.
 
-Never guarantee price direction, returns, profits, or risk-free outcomes. Do not present speculation as fact.
+## Language
+Prefer measurable factual statements such as “X% değişti” over predictions presented as certainty. Forecasts must be clearly labeled as estimates or scenarios and must not be represented as facts.
 
-For changing data show appropriate live, delayed, historical, updating, or unavailable status. Use verified timestamps and sources.
+## AI
+AI must not invent financial facts, analyst opinions, targets, news, or sources. Verify all numerical claims against trusted data before publication.
 
-When an API is unavailable, never invent a value. Show unavailable or a clearly marked last verified value.
+## Calculations
+Validate inputs, currency, period, formula, and rounding. Missing inputs produce an unavailable result, not a guessed calculation.
 
-Use neutral Turkish financial language and communicate material uncertainty. Avoid sensational urgency and unsupported recommendations.
+## Monetization
+Affiliate, sponsored, and advertising content must remain clearly distinguishable from financial information and editorial analysis.
 
-Before publishing financial content verify numbers, dates, entity identity, source, calculation, and status.
+## QA
+Review claims, numbers, dates, sources, labels, disclaimers where relevant, and user-facing wording before release. Do not overstate what the data proves.

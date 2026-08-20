@@ -1,15 +1,22 @@
 ---
 name: freshness-monitor
-description: Detect and manage stale CanliHisse market data and editorial content without fake timestamps or meaningless updates.
+description: Detect stale market data and editorial content on CanliHisse, enforce truthful freshness signals, and prevent fake updates.
 ---
 # Freshness Monitor
 
-Track appropriate fields such as retrieved_at, updated_at, last_verified_at, source, and data status.
+## Data Freshness
+Track when available: retrieved_at, updated_at, last_verified_at, source, and status. Use explicit states: live, delayed, historical, updating, unavailable.
 
-For market data distinguish live, delayed, historical, updating, and unavailable. Never generate a timestamp from page-render time unless it represents the actual data retrieval event.
+## Market Data
+Prioritize volatile prices, volume, exchange status, feeds, and timestamps. A page-render timestamp is not a data-retrieval timestamp unless it represents the retrieval event.
 
-For editorial content, only change an updated date after genuine review or material update. Preserve historical context and facts.
+If a provider fails, preserve a clearly labeled last verified value or show unavailable. Never make stale data appear live.
 
-Prioritize stale volatile data, broken feeds, outdated company information, expired links, and articles requiring factual updates.
+## Editorial Freshness
+Only change an article's update date after a genuine review or material update. Preserve historical facts and publication dates. Never refresh dates solely for SEO.
 
-When data is unavailable, show unavailable or the last verified value with clear labeling. Never refresh a timestamp to make stale content appear fresh.
+## Monitoring
+Detect stale records, broken feeds, expired links, outdated company facts, and articles requiring factual review. Prefer fixing upstream data/revalidation processes.
+
+## QA
+Test timezone handling, caching, revalidation, API failures, and visible timestamps. Confirm every freshness label matches actual data state.

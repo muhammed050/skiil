@@ -1,15 +1,32 @@
 ---
 name: sitemap-manager
-description: Generate and validate CanliHisse XML sitemaps for canonical, public, indexable URLs and useful image discovery.
+description: Generate and validate production-quality XML, image, and sitemap-index files for CanliHisse without exposing duplicate, private, redirected, or non-indexable URLs.
 ---
 # Sitemap Manager
 
-Include canonical, public, indexable URLs. Exclude redirects, 404/410, noindex, duplicates, private pages, invalid generated entities, and non-canonical variants.
+## Inclusion Gate
+Include only canonical, public, indexable, successful URLs that are genuinely useful.
 
-Use sitemap indexes when scale requires splitting files. Include image entries where genuinely useful for image-heavy content.
+Exclude:
+- redirects
+- 404/410 URLs
+- noindex pages
+- duplicates
+- private/account pages
+- invalid programmatic pages
+- parameter noise
 
-Keep sitemap URLs consistent with canonical tags, redirects, robots behavior, and internal links.
+## Sitemap Types
+Use a sitemap index when scale requires splitting. Maintain separate logical groups for major content types when useful. Add image sitemap data where it materially helps image discovery.
 
-Validate XML syntax, HTTP status, URL count/limits, last modification data when used, and representative generated URLs.
+## Accuracy
+Sitemap URLs must match the site's preferred HTTPS host and canonical URLs. Do not list URLs merely because they exist in a database.
 
-Never claim sitemap submission guarantees indexing.
+## Freshness
+Regenerate or revalidate after meaningful content/URL changes. Do not manipulate last-modification information to pretend content changed when it did not.
+
+## Validation
+Check XML syntax, URL accessibility, response codes, canonical consistency, duplicates, limits, encoding, and production hostname. Confirm robots.txt points to the real sitemap.
+
+## Search Console
+Sitemap submission is a discovery signal, not an indexing guarantee. Monitor errors and investigate patterns instead of repeatedly resubmitting unchanged broken files.

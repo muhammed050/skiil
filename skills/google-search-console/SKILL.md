@@ -1,62 +1,35 @@
 ---
 name: google-search-console
-description: Diagnose CanliHisse search visibility, indexing, crawling, performance, and sitemap issues using Google Search Console evidence and representative URL analysis.
+description: Use Google Search Console evidence to diagnose CanliHisse indexing, crawling, sitemap, performance, canonical, security, and search-visibility problems without guessing.
 ---
 # Google Search Console
 
-## Mission
-Use Search Console as evidence, not as a source of guesses. Separate technical indexing problems from content/ranking problems.
+## Evidence First
+Search Console is evidence, not a reason to invent explanations. Capture the exact URL/pattern and relevant status before modifying code.
 
 ## Inspect
-When access is available review:
-- URL Inspection
-- Page Indexing
-- Sitemaps
-- Search performance
-- Core Web Vitals
-- HTTPS/security issues
-- manual actions
-- crawl/indexing patterns
+When access is available inspect URL Inspection, Page Indexing, Sitemaps, Search Performance, Core Web Vitals, HTTPS/security, and manual actions.
 
-## URL Inspection Workflow
-For a problematic URL record:
-1. exact URL
-2. indexing status
-3. user-declared canonical
-4. Google-selected canonical when available
-5. crawl status
-6. last crawl information when available
-7. referring/discovery signals when available
-8. relevant rendered/content observations
+## URL Inspection
+For problem URLs record:
+- exact URL
+- indexing status
+- user-declared canonical
+- Google-selected canonical when available
+- crawl status/date when available
+- discovery/referring signals when available
+- rendered/content observations
 
-Then identify the root cause before editing the application.
+Then identify root cause.
 
-## Pattern Diagnosis
-Group issues by pattern rather than treating thousands of URLs individually:
-- stock template
-- company template
-- article template
-- parameter URLs
-- duplicate routes
-- mobile/rendering pattern
-- sitemap pattern
-
-Validate several representative URLs before mass changes.
-
-## Sitemaps
-Check submitted sitemap status, errors, URL consistency, and whether sitemap URLs are canonical/indexable. A sitemap is not proof of indexing.
+## Pattern Analysis
+Group issues by stock/company/article template, parameter behavior, duplicate routes, mobile/rendering pattern, or sitemap pattern. Validate representative samples before mass fixes.
 
 ## Performance
-Use queries/pages/countries/devices data to identify meaningful search patterns. Do not chase low-value keywords by generating thin pages.
+Use query/page/device/country data to prioritize actual search demand and problems. Do not generate thin pages merely because a keyword has impressions.
+
+## Sitemaps
+Check submitted sitemap status, errors, canonical consistency, and indexable URL quality. Submission is not proof of indexing.
 
 ## Reporting
-Every issue must contain:
-- severity
-- affected URL/pattern
-- evidence
-- root cause
-- exact fix
-- validation method
-- expected outcome
-
-Never claim Google indexed a page without evidence. Never fabricate Search Console data.
+Every finding: severity, URL/pattern, evidence, root cause, exact fix, validation, expected outcome. Never fabricate Search Console observations or claim indexing without evidence.

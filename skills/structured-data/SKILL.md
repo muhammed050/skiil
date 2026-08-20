@@ -1,18 +1,32 @@
 ---
 name: structured-data
-description: Implement truthful JSON-LD structured data for CanliHisse pages and keep schema synchronized with visible content.
+description: Implement truthful, valid, page-specific Schema.org JSON-LD for CanliHisse while preventing fabricated entities, reviews, ratings, dates, and unsupported markup.
 ---
 # Structured Data
 
-Use JSON-LD only when the schema genuinely applies and is supported by visible content.
+## Core Rule
+Structured data describes visible, truthful page content. It is not a place to add claims that users cannot see or verify.
 
-Potential schemas include Organization, WebSite, BreadcrumbList, Article, NewsArticle, Dataset, and eligible FAQPage.
+## Candidate Types
+Use only when genuinely applicable:
+- Organization
+- WebSite
+- BreadcrumbList
+- Article
+- NewsArticle
+- Dataset
+- FAQPage when content and eligibility requirements are actually met
 
-Rules:
-- Match visible content exactly.
-- Use real names, dates, authors, images, prices, and relationships.
-- Never fabricate ratings, reviews, aggregate scores, authors, prices, FAQ answers, or publication dates.
-- Keep canonical URLs consistent.
-- Remove or update schema when page content changes.
+## Rules
+- Match visible name, URL, headline, author, publisher, image, dates, and entity identity.
+- Use the canonical URL consistently.
+- Never fabricate ratings, reviews, prices, authors, credentials, dates, FAQ answers, or aggregate scores.
+- Do not mark hidden or unrelated content.
+- Avoid duplicate/conflicting schema graphs.
+- Keep JSON valid and use the correct Schema.org vocabulary.
 
-Validate JSON-LD syntax, required properties, URL consistency, entity identity, and representative templates before scaling programmatically.
+## Financial Pages
+A stock price or financial value in schema must come from the same verified source as the visible value and carry appropriate freshness context when the chosen type supports it. Do not invent financial properties simply to increase markup.
+
+## QA
+Validate JSON-LD syntax, entity relationships, URLs, dates, images, visible-content parity, and representative templates. Remove obsolete schema when page content changes. Structured data is not an indexing or rich-result guarantee.

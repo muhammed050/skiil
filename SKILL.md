@@ -1,226 +1,485 @@
 ---
 name: canlihisse-seo-intelligence
-description: Use when auditing, improving, debugging, or implementing SEO, Google indexing, Google Images, stock pages, financial content, technical SEO, structured data, sitemaps, robots.txt, canonical URLs, metadata, internal linking, JavaScript rendering, Core Web Vitals, Search Console visibility, image SEO, news SEO, entity SEO, freshness, AdSense safety, or programmatic SEO for CanliHisse.
+description: Use when auditing, building, debugging, or optimizing CanliHisse SEO, Google Search indexing, Google Images, stock and company pages, Turkish financial content, programmatic SEO, structured data, sitemaps, robots.txt, canonical URLs, metadata, internal linking, JavaScript rendering, Core Web Vitals, Search Console, image SEO, news SEO, entity SEO, freshness, AdSense safety, and content integrity.
 ---
 
-# CanliHisse SEO Intelligence
+# CanliHisse SEO Intelligence — Production Playbook
 
-Use this skill as the unified SEO and content-quality playbook for CanliHisse (canlihisse.com). Preserve financial-data accuracy and existing application business logic.
+This skill is the operating standard for CanliHisse (canlihisse.com). It is designed for an AI coding agent that can inspect and modify the application.
 
-## 1. AdSense Policy Guard
-- Keep pages useful even without ads.
-- Never encourage ad clicks or create deceptive ad-like buttons.
-- Keep ads visually distinct from navigation, charts, stock controls, downloads, and content.
+## Mission
+
+Improve organic visibility and user value without breaking business logic or financial-data accuracy.
+
+Priority order:
+1. Accuracy and user safety
+2. Crawlability and indexability
+3. Helpful, original content
+4. Trust and transparency
+5. Performance and accessibility
+6. SEO growth
+7. Monetization
+
+Never sacrifice truth, usability, or working product behavior for an SEO shortcut.
+
+## Operating Procedure
+
+Before changing code:
+1. Identify the affected URL(s) and page type.
+2. Inspect existing implementation and data flow.
+3. Determine whether the issue is crawl, index, content, rendering, metadata, schema, links, images, performance, or data integrity.
+4. Make the smallest safe change.
+5. Validate the generated output.
+6. Check mobile behavior.
+7. Check that financial APIs and business logic still work.
+8. Report evidence, changed files, and validation.
+
+Never make broad SEO changes based on assumptions when the actual URL pattern or implementation can be inspected.
+
+# 1. AdSense Policy Guard
+
+- Pages must provide substantial value without ads.
+- Never encourage ad clicks.
+- Never make ads resemble navigation, stock charts, buy/sell controls, downloads, or functional buttons.
 - Avoid excessive ad density and accidental-click risk, especially on mobile.
-- Never fabricate reviews, ratings, statistics, authors, sources, or financial claims.
-- Never promise guaranteed profits or risk-free investing.
+- Keep sponsored and affiliate content clearly disclosed.
+- Never fabricate reviews, ratings, users, traffic, sources, authors, statistics, or financial claims.
+- Never promise guaranteed profits, guaranteed returns, or risk-free investing.
+- Never create pages whose primary purpose is advertising.
+- Preserve clear privacy, contact, ownership, and policy information.
 
-## 2. Technical SEO Quality
-- Keep important public pages crawlable and indexable.
-- Use unique titles, descriptions, canonical URLs, Open Graph metadata, and appropriate language metadata.
-- Avoid duplicate URLs, accidental noindex, broken links, and blocked essential resources.
-- Keep important pages in the XML sitemap.
-- Optimize server response, images, JavaScript, caching, layout stability, and mobile UX.
+# 2. Technical SEO
 
-## 3. Helpful Content Editor
-- Write original, useful, people-first Turkish content.
-- Answer real search intent directly.
-- Avoid keyword stuffing, filler, spun text, and near-duplicate programmatic pages.
-- Separate facts, historical data, analysis, commentary, and opinion.
-- Financial content must never present speculation as certainty.
+Every indexable page should have:
+- unique title
+- useful meta description
+- canonical URL
+- correct language
+- Open Graph metadata
+- appropriate Twitter/X metadata
 
-## 4. Trust and Transparency
-- Maintain accurate Hakkımızda, İletişim, Gizlilik Politikası, Kullanım Koşulları, and advertising/sponsorship disclosures where applicable.
-- Clearly communicate market-data source, freshness, delay status, and last verified time when relevant.
-- Never invent licenses, partnerships, experts, authors, offices, reviews, or credentials.
-- Clearly label sponsored and affiliate content.
+Check:
+- HTTP status
+- crawlability
+- indexability
+- robots.txt
+- noindex
+- canonical
+- redirects
+- internal links
+- sitemap inclusion
+- JavaScript rendering
+- duplicate URLs
+- mobile rendering
 
-## 5. Content Integrity
-- Never invent stock prices, volume, financial results, news, sources, dates, authors, statistics, reviews, or historical data.
-- If an API fails, show an honest unavailable or last-verified state instead of fake data.
-- Validate ticker/company/exchange relationships and timestamps.
-- Structured data must match visible content.
+Do not block essential CSS or JavaScript resources.
 
-## 6. Google Indexing
-For every important public page, verify this chain:
-1. URL returns the correct HTTP status, normally 200.
-2. Page is publicly accessible.
-3. Page is not accidentally blocked by robots.txt.
-4. Page is not accidentally noindex.
-5. Canonical points to the preferred URL.
-6. Page is included in the appropriate sitemap.
-7. Page has meaningful internal links.
-8. JavaScript rendering does not hide essential content from crawlers.
-9. Thin, duplicate, empty, or invalid pages are not mass-published.
-10. Use Google Search Console inspection/reporting to diagnose discovered-but-not-indexed and crawled-but-not-indexed cases.
+# 3. Google Indexing
 
-Never claim that a page is indexed merely because it is in the sitemap. Indexing is decided by Google.
+For each important public URL verify this chain:
 
-## 7. Image Indexing
-Optimize images so search engines can discover and understand them.
-- Use real, crawlable image URLs.
-- Do not block important image paths with robots.txt or restrictive headers.
-- Use descriptive filenames where practical.
-- Provide useful alt text that describes the image naturally.
-- Give images width and height to reduce layout shifts.
-- Use responsive images and srcset where appropriate.
-- Prefer efficient formats such as WebP or AVIF when compatible.
-- Ensure important images are present in rendered HTML or otherwise discoverable.
-- Use an image sitemap for large or image-heavy sections when useful.
-- Do not create keyword-stuffed alt text.
-- Do not invent image content or misleading filenames.
-- Make sure CDN/image transformations do not prevent Googlebot from fetching images.
+URL → correct HTTP status → publicly accessible → not blocked → not accidental noindex → canonical correct → sitemap where appropriate → internal links → crawlable rendered content.
 
-## 8. Programmatic SEO
-- Generate pages only when each page has meaningful entity-specific value.
-- Validate every ticker, company, sector, and identifier before generating a page.
-- Avoid thousands of thin pages that differ only by a name or symbol.
-- Include real data, explanations, relevant links, useful tables/charts, and freshness information.
-- Do not publish empty pages when required data is unavailable.
+Important rules:
+- A sitemap does not guarantee indexing.
+- Never claim a URL is indexed merely because it is in the sitemap.
+- Investigate discovered-but-not-indexed and crawled-but-not-indexed patterns through Search Console when available.
+- Fix the cause, not only the symptom.
+- Avoid mass-publishing thin, empty, duplicate, or invalid URLs.
+- Avoid orphaning important pages.
+- Do not use noindex as a substitute for proper canonicalization when duplicates should consolidate.
 
-## 9. Internal Linking
-- Build useful contextual links between related stocks, companies, sectors, news, and educational guides.
-- Link important pages from navigational/category pages.
-- Avoid orphan pages where important content has no internal path.
-- Use descriptive anchor text naturally.
-- Do not create artificial link networks or irrelevant link blocks.
+# 4. Google Images and Image Indexing
 
-## 10. Structured Data
-Use JSON-LD only when the page genuinely qualifies.
-Possible schemas include Organization, WebSite, BreadcrumbList, Article, NewsArticle, FAQPage, and Dataset where appropriate.
-- Schema must match visible content.
-- Never fabricate ratings, reviews, authors, dates, prices, or FAQ answers.
-- Remove unsupported schema instead of forcing it.
+Important images must be genuinely discoverable and fetchable.
 
-## 11. Sitemap Manager
+For important images:
+- use crawlable absolute/valid URLs
+- use descriptive filenames
+- use accurate natural alt text
+- provide width and height
+- use responsive images and srcset where appropriate
+- use WebP/AVIF when compatible
+- preserve meaningful surrounding text/captions
+- ensure JavaScript does not hide critical images from crawlers
+- ensure CDN transformations allow Googlebot access
+- check robots.txt and X-Robots-Tag restrictions
+- use image sitemap entries for large/image-heavy sections when useful
+
+Do not keyword-stuff alt text.
+Do not use misleading filenames or fabricated image descriptions.
+Do not assume an image sitemap guarantees ranking in Google Images.
+
+# 5. Image SEO
+
+For each important image evaluate:
+- relevance to the page
+- original/useful content
+- filename
+- alt text
+- caption when useful
+- surrounding text
+- dimensions
+- compression
+- format
+- responsive delivery
+- lazy loading strategy
+- CDN accessibility
+- page canonical context
+
+Decorative images should not be forced into SEO targets.
+
+# 6. Helpful Content Editor
+
+Create original, people-first Turkish content.
+
+Every page must satisfy a real user intent.
+
+Separate:
+- facts
+- historical data
+- analysis
+- commentary
+- opinion
+- sponsored content
+
+Avoid:
+- keyword stuffing
+- filler
+- spun content
+- automatic synonym replacement
+- copied articles
+- near-duplicate pages
+- content created only to capture search traffic
+
+Financial statements must be cautious and evidence-based.
+
+# 7. Programmatic SEO
+
+Programmatic pages are allowed only when each page has meaningful entity-specific value.
+
+For stock pages validate:
+- company
+- ticker
+- exchange
+- identifier
+- sector
+- source data
+
+Useful stock-page components may include:
+- current/last verified price
+- change
+- volume
+- historical data
+- financial metrics
+- company information
+- sector information
+- related news
+- related stocks
+- update status
+- explanatory content
+
+Never generate thousands of pages containing only a ticker, price, and generic paragraph.
+
+Do not publish empty entity pages unless there is a legitimate reason and useful content exists.
+
+# 8. Internal Linking
+
+Create a logical information architecture:
+
+Home → Categories → Sectors → Companies → Stocks → News/Analysis/Education
+
+Use contextual links between:
+- stock and company
+- stock and sector
+- stock and related stocks
+- stock and relevant news
+- article and relevant entities
+- educational guide and related concepts
+
+Use descriptive natural anchor text.
+Avoid artificial link blocks, irrelevant links, and excessive repetition.
+
+Important pages should have discoverable internal paths.
+
+# 9. Structured Data
+
+Use JSON-LD only when supported by visible content.
+
+Potential schemas:
+- Organization
+- WebSite
+- BreadcrumbList
+- Article
+- NewsArticle
+- Dataset
+- FAQPage only when genuinely applicable and eligible
+
+Never fabricate:
+- reviews
+- ratings
+- authors
+- prices
+- dates
+- FAQ answers
+- aggregate scores
+
+Schema must match visible page content and should be removed when no longer valid.
+
+# 10. Sitemap Manager
+
 Maintain valid XML sitemaps.
-- Include canonical, public, indexable URLs.
-- Exclude redirects, 404s, noindex pages, duplicates, and private URLs.
-- Keep sitemap URLs absolute and HTTPS when HTTPS is canonical.
-- Update sitemaps when important content changes.
-- Use image sitemap entries where they provide value.
-- Split large sitemaps into sitemap indexes when limits require it.
-- A sitemap helps discovery but does not guarantee indexing.
 
-## 12. Robots and Canonical
-- robots.txt controls crawling; it is not a replacement for noindex.
-- Never accidentally disallow important pages or required resources.
-- Keep the sitemap declaration correct.
-- Canonical URLs must be stable, HTTPS, preferred-domain URLs and self-consistent.
-- Do not canonicalize unrelated pages to the homepage.
-- Avoid canonical conflicts between HTML, sitemap, redirects, and internal links.
+Include:
+- canonical
+- public
+- indexable
+- valid HTTPS URLs when HTTPS is canonical
 
-## 13. Core Web Vitals
-Prioritize real-user performance:
-- LCP: optimize server response, critical assets, hero images, and rendering.
-- INP: reduce unnecessary client JavaScript and expensive event handlers.
-- CLS: reserve image/ad/chart dimensions and avoid layout shifts.
-Also improve mobile responsiveness, font loading, caching, compression, and database/API latency.
+Exclude:
+- redirects
+- 404/410 URLs
+- noindex URLs
+- duplicates
+- private/dashboard URLs
+- invalid generated pages
 
-## 14. Financial Content Safety
-- Do not provide guaranteed price predictions or guaranteed returns.
-- Clearly distinguish factual market data from analysis and opinion.
-- Show data freshness/delay where relevant.
-- Never fabricate missing financial values.
-- Use neutral Turkish financial terminology.
-- Explain uncertainty when discussing future market behavior.
+Use sitemap indexes when scale requires splitting files.
+Use image sitemap entries where useful.
+Update sitemap generation when important content changes.
 
-## 15. Google Search Console
-Use Search Console as the primary diagnostic source for Google search visibility.
-Check, when access is available:
+# 11. Robots and Canonical
+
+robots.txt controls crawling; it is not a noindex mechanism.
+
+Never accidentally disallow:
+- important pages
+- CSS/JS needed for rendering
+- important images
+
+Canonical rules:
+- stable
+- absolute
+- preferred domain
+- HTTPS
+- self-consistent
+
+Do not canonicalize unrelated pages to the homepage.
+Check consistency across:
+- HTML canonical
+- sitemap
+- redirects
+- internal links
+- structured data where relevant
+
+# 12. Core Web Vitals and Performance
+
+Optimize:
+- LCP: server response, critical assets, hero images, rendering
+- INP: client JavaScript and expensive event handlers
+- CLS: reserved image/ad/chart dimensions and stable layouts
+
+Also evaluate:
+- mobile responsiveness
+- font loading
+- caching
+- compression
+- code splitting
+- image optimization
+- API latency
+- database queries
+- unnecessary hydration/client JavaScript
+
+Do not remove useful content simply to chase synthetic scores.
+
+# 13. Financial Content Safety
+
+CanliHisse is a financial information product.
+
+Never state uncertain future prices as facts.
+Never promise returns.
+Never describe investments as risk-free.
+
+Clearly distinguish market data from analysis and opinion.
+Show live/delayed/historical/unavailable status when relevant.
+Use neutral Turkish financial terminology.
+
+Bad:
+“THYAO kesin %30 yükselecek.”
+
+Good:
+“THYAO son dönemde X% değişti. Gelecekteki fiyat hareketi kesin olarak öngörülemez.”
+
+# 14. Content Integrity
+
+Never invent:
+- stock prices
+- volume
+- financial results
+- news
+- quotes
+- sources
+- dates
+- authors
+- statistics
+- reviews
+- historical prices
+- user counts
+
+When an API fails:
+- show unavailable, or
+- show a clearly marked last verified value
+
+Never use random values, zero, another stock's value, or stale data disguised as current.
+
+Validate numeric type, currency, exchange, ticker/company relationship, timestamp, and source before publishing.
+
+# 15. Data Freshness
+
+Track when appropriate:
+- retrieved_at
+- updated_at
+- last_verified_at
+- data status
+
+Statuses may be:
+- live
+- delayed
+- historical
+- updating
+- unavailable
+
+Never generate a fake update timestamp.
+Never change an article's updated date unless it was actually reviewed/updated.
+Preserve historical context.
+
+# 16. News SEO
+
+For genuine news:
+- accurate headline
+- accurate publication date
+- accurate update date when applicable
+- source identification
+- meaningful article content
+- correct author only if real
+- appropriate article image
+- correct canonical
+- NewsArticle only when eligible
+
+Never fabricate quotes, events, sources, or breaking-news claims.
+Do not rewrite another publisher's article into a lightly changed copy and call it original reporting.
+
+# 17. Entity SEO
+
+Keep entities consistent across the site.
+
+Example:
+THYAO → Türk Hava Yolları → company entity → BIST listing → sector → related news
+
+Validate:
+- ticker
+- company name
+- exchange
+- sector
+- stable identifier
+- canonical URL
+
+Never mix similarly named companies or symbols.
+
+# 18. Google Search Console
+
+When access is available, use Search Console to inspect:
 - URL Inspection
 - Page indexing
 - Sitemaps
 - Core Web Vitals
 - HTTPS/security issues
-- Manual actions
-- Search performance
-- Crawl/indexing patterns
-Do not infer indexing status from a sitemap alone.
-When fixing an issue, identify the exact URL pattern and verify the fix rather than making broad speculative changes.
+- manual actions
+- search performance
+- crawl/indexing patterns
 
-## 16. Image SEO
-For every important image:
-- meaningful filename
-- accurate alt text
-- appropriate dimensions
-- responsive delivery
-- efficient format
-- relevant surrounding text
-- stable canonical page context
-Do not use decorative images as keyword targets. Do not stuff keywords into alt attributes.
+Do not infer indexing status from sitemap presence.
+For each issue identify:
+- exact URL or pattern
+- evidence
+- likely root cause
+- fix
+- validation
 
-## 17. News SEO
-For genuine news content:
-- use accurate headline and publication/update dates
-- identify the source
-- preserve the meaning of the source
-- avoid fabricated quotes and events
-- distinguish reporting from commentary
-- use NewsArticle only when the page genuinely qualifies
-- keep timestamps accurate
-- avoid fake breaking-news claims
+# 19. Trust and Transparency
 
-## 18. Entity SEO
-Treat companies, stocks, sectors, exchanges, and financial entities consistently.
-- Use stable identifiers and canonical URLs.
-- Keep ticker, company name, exchange, sector, and data relationships correct.
-- Link entity pages consistently.
-- Avoid mixing similarly named companies or symbols.
-- Where structured data is used, represent only verified entity information.
+Maintain accurate:
+- Hakkımızda
+- İletişim
+- Gizlilik Politikası
+- Kullanım Koşulları where applicable
+- advertising/sponsorship disclosure
 
-## 19. Freshness Monitor
-For changing market pages and articles:
-- track last data retrieval and verification times.
-- distinguish live, delayed, historical, and unavailable states.
-- update volatile values from verified sources.
-- do not change an article's updated date unless it was actually reviewed/updated.
-- preserve historical context.
-- flag stale or failed upstream data instead of silently presenting it as current.
+Clearly communicate:
+- data sources
+- data freshness
+- delay status
+- last verified time
+- sponsored/affiliate relationships
 
-## 20. SEO Audit
+Never invent:
+- licenses
+- partnerships
+- experts
+- credentials
+- offices
+- awards
+- authors
+
+# 20. SEO Audit
+
 When asked to audit CanliHisse, inspect in this order:
-1. Indexability and HTTP status.
-2. robots.txt and sitemap.
-3. Canonical consistency.
-4. Titles and descriptions.
-5. Rendering and crawlable content.
-6. Internal links and orphan pages.
-7. Structured data.
-8. Duplicate/thin content.
-9. Programmatic page quality.
-10. Image discovery and image SEO.
-11. Core Web Vitals/mobile UX.
-12. Financial-data integrity.
-13. Trust, privacy, and advertising transparency.
-14. Search Console signals when available.
+1. HTTP status and indexability
+2. robots.txt
+3. sitemap
+4. canonical consistency
+5. metadata
+6. rendered/crawlable content
+7. internal links/orphans
+8. structured data
+9. duplicate/thin content
+10. programmatic pages
+11. image discovery/SEO
+12. Core Web Vitals/mobile UX
+13. financial-data integrity
+14. trust/advertising transparency
+15. Search Console signals
 
-For every issue report:
-- severity: critical / high / medium / low
+Every reported issue must contain:
+- severity: critical/high/medium/low
 - affected URL or pattern
 - evidence
 - root cause
 - exact fix
 - validation method
 
-## Safe Automation Rules
-- Never mass-delete or mass-redirect pages without inspecting URL patterns first.
-- Never change production financial-data logic while performing an SEO task unless explicitly required.
-- Never invent data to fill empty states.
+# Safety and Change Control
+
+- Never mass-delete pages without inspecting the URL pattern.
+- Never mass-redirect without validating destination relevance.
+- Never change production financial-data logic during an SEO task unless explicitly required.
+- Never invent data to fill an empty state.
 - Prefer small, reversible changes.
-- Verify generated files such as robots.txt, sitemap.xml, and JSON-LD after edits.
+- Validate robots.txt, sitemap XML, canonical tags, JSON-LD, metadata, and generated URLs after changes.
 - Preserve existing working business logic.
 
-## Definition of Done
-An SEO change is complete only when:
-- the intended URLs are crawlable/indexable,
-- canonical signals are consistent,
-- sitemap/robots behavior is correct,
-- metadata is useful and unique,
-- structured data is valid and truthful,
-- important content is rendered for crawlers,
-- images are discoverable and optimized,
-- internal links support important pages,
-- mobile performance remains healthy,
-- financial data remains accurate,
-- and no misleading AdSense or financial-content behavior was introduced.
+# Definition of Done
+
+An SEO task is complete only when:
+- intended URLs are crawlable/indexable
+- canonical signals are consistent
+- sitemap and robots behavior are correct
+- metadata is useful and unique
+- essential content is crawlable/renderable
+- structured data is truthful and supported
+- images are discoverable and optimized
+- internal links support important pages
+- mobile performance remains healthy
+- financial data remains accurate
+- trust and advertising transparency are preserved
+- no deceptive SEO or AdSense behavior was introduced

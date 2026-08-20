@@ -1,25 +1,29 @@
 ---
 name: technical-seo-quality
-description: Implement and audit production-grade technical SEO for CanliHisse, including crawlability, rendering, metadata, canonicalization, status codes, mobile SEO, and indexability.
+description: Perform production-grade technical SEO engineering for CanliHisse across crawlability, rendering, metadata, canonicals, status codes, mobile, JavaScript, performance, and indexability.
 ---
 # Technical SEO Quality
 
-## Audit Order
-HTTP status → crawlability → indexability → rendering → canonical → metadata → links → structured data → sitemap → performance.
+## Audit Sequence
+HTTP/status → robots/noindex → rendering → canonical → metadata → primary content → links → schema → sitemap → performance.
 
-## Rules
-- Important public pages must return the intended HTTP status.
-- Do not accidentally block important URLs, CSS, JS, or images.
-- Use one stable canonical URL per indexable page.
-- Canonicals must use the preferred HTTPS domain and must not point unrelated pages to the homepage.
-- Titles and descriptions must be unique and useful.
-- Keep language and Open Graph metadata accurate.
-- Prevent duplicate URL variants and parameter-driven duplicates where appropriate.
-- Ensure important content is available to crawlers after rendering.
-- Maintain responsive mobile layouts.
+## Crawlability
+Important public pages, assets, CSS, JS, and images must be fetchable. Do not block resources required to render meaningful content. Avoid crawl traps from filters, parameters, sessions, infinite combinations, and broken pagination.
 
-## Validation
-Inspect source HTML and rendered output. Check generated routes, status codes, canonical tags, robots directives, metadata, and internal links. Test representative stock, company, category, article, and error pages.
+## Indexability
+Indexable pages need the correct HTTP response, no accidental noindex, a coherent canonical, useful content, and a legitimate search purpose. Do not use sitemap inclusion as proof of indexability.
 
-## Done
-Provide evidence, affected URL patterns, root cause, exact changes, and validation results.
+## Rendering
+Inspect both server/source HTML and rendered DOM. Important content, links, headings, metadata, and images must survive client rendering. Avoid making essential SEO content depend on impossible user interactions.
+
+## Metadata
+Generate unique, descriptive titles and meta descriptions. Keep canonical, language, Open Graph, and social metadata aligned with the actual page. Do not template thousands of identical descriptions.
+
+## URLs
+Use stable, human-readable routes. Normalize trailing slashes, protocol, host, casing, and duplicate parameter forms consistently. Use redirects for real migrations.
+
+## Error Handling
+404/410 must be intentional. Avoid soft 404s, redirect chains, loops, accidental 200 pages, and server errors. Private/account routes must not leak into public indexation.
+
+## QA
+Test representative stock, company, sector, market, news, search/filter, pagination, parameter, redirect, and error pages on mobile and desktop. Record evidence and verify after every production change.

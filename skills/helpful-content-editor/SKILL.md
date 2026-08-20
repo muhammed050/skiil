@@ -1,26 +1,37 @@
 ---
 name: helpful-content-editor
-description: Create, review, and improve original people-first Turkish financial content for CanliHisse while preventing thin, spun, repetitive, or misleading content.
+description: Create and audit original, people-first Turkish financial content for CanliHisse with strong search intent coverage, factual verification, originality, and useful entity context.
 ---
 # Helpful Content Editor
 
-## Goal
-Satisfy real user intent with accurate, original, readable Turkish content.
+## Mission
+Satisfy the reader's real question clearly and accurately. SEO is a consequence of useful content, not the purpose of empty text.
 
-## Rules
-- Write for people first, not keyword counts.
-- Answer the query directly before adding context.
-- Separate facts, historical data, analysis, opinion, and sponsored content.
-- Never fabricate numbers, sources, quotes, authors, credentials, or market events.
-- Never use guaranteed-profit or risk-free investment language.
-- Avoid keyword stuffing, filler, spun text, and near-duplicate programmatic pages.
-- Add genuine value through verified data, context, comparisons, explanations, tables, or relevant links.
+## Editorial Structure
+Use clear Turkish headings, concise paragraphs, tables or lists when useful, exact dates for changing information, and direct answers before background detail.
 
-## Stock Content
-Where available, explain company, ticker, sector, current/last verified data, historical information, relevant metrics, news, and limitations. Never let a template produce hundreds of generic pages with only a changed ticker.
+Separate:
+- verified facts
+- historical data
+- analysis
+- opinion
+- education
+- sponsored/affiliate content
+
+## Financial Accuracy
+Every price, percentage, ratio, date, company fact, quote, and market event must come from a reliable source or application data. Never invent missing values.
+
+## Originality
+Avoid copied articles, spun rewrites, synonym swapping, filler, keyword stuffing, and near-duplicate stock pages. Add genuine value through verified data, context, comparisons, explanations, calculations, charts, or relevant links.
+
+## Programmatic Content
+Templates must create entity-specific value. A page is not useful merely because the ticker or company name changed. Stop generation when required data or meaningful content is missing.
+
+## AI
+AI may draft and summarize but must not fabricate sources, authors, credentials, quotes, statistics, analyst opinions, or market predictions. Verify before publishing.
 
 ## Turkish Quality
-Use natural Turkish, clear headings, short paragraphs, accurate financial terminology, and explicit dates when information changes.
+Use natural Turkish and accurate financial terminology. Avoid exaggerated headlines and guaranteed-outcome language.
 
 ## QA
-Verify factual claims, numbers, dates, source attribution, search intent, originality, and useful internal links before publication.
+Review intent match, factual claims, numerical accuracy, source attribution, originality, usefulness, readability, internal links, and freshness before publication.

@@ -1,15 +1,25 @@
 ---
 name: image-seo
-description: Optimize CanliHisse images for users and search engines through relevance, filenames, alt text, dimensions, formats, responsive delivery, and crawlability.
+description: Optimize CanliHisse images for users, accessibility, performance, crawling, and Google Images without keyword stuffing or fabricated visual information.
 ---
 # Image SEO
 
-Use images that genuinely support page intent. Give important images descriptive filenames and concise natural alt text. Add captions when they improve understanding.
+## Image Selection
+Use images that genuinely help understand the page: company visuals, verified charts, market graphics, editorial images, or useful explanatory visuals.
 
-Use width/height to reduce layout shift, responsive srcset/picture where useful, and WebP/AVIF when compatible. Compress without destroying useful chart or text detail.
+## Metadata
+For meaningful images use descriptive filenames and concise natural alt text. Add captions when they improve understanding. Decorative images should normally use empty alt text.
 
-Do not keyword-stuff alt text. Decorative images should generally have empty alt text rather than forced SEO copy.
+Never put keywords, tickers, prices, or claims into alt text unless they accurately describe the visible image.
 
-Check CDN accessibility, image URLs, lazy-loading strategy, surrounding text, OG images, and Google Images discoverability.
+## Technical Delivery
+Use correct MIME types, width/height, responsive srcset/picture where useful, modern formats when compatible, compression, stable URLs, and appropriate lazy-loading. Reserve space to prevent CLS.
 
-Never fabricate image subjects, chart values, company logos, or data represented in an image.
+## Google Images
+Ensure important images are crawlable, publicly fetchable, contextually associated with the page, and not blocked by robots.txt, CDN rules, authentication, or X-Robots-Tag. Use image sitemap support where appropriate.
+
+## Charts
+Chart images must represent real verified data. Never embed fabricated prices or labels in an image. Prefer accessible HTML/SVG/data alternatives where useful.
+
+## QA
+Test mobile, CDN URLs, image response status, dimensions, source HTML/rendered DOM, alt text, OG images, loading behavior, and visual fidelity.

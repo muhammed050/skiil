@@ -1,16 +1,31 @@
 ---
 name: trust-transparency
-description: Build trustworthy CanliHisse pages with accurate ownership, contact, source, timestamp, editorial, privacy, advertising, and financial disclosures.
+description: Build transparent, credible CanliHisse pages with truthful ownership, contact, data-source, freshness, editorial, privacy, advertising, and financial disclosures.
 ---
 # Trust Transparency
 
-- Maintain accurate Hakkımızda, İletişim, Gizlilik Politikası, and relevant Kullanım Koşulları pages.
-- Identify data sources and whether data is live, delayed, historical, or unavailable.
-- Never fabricate authors, experts, licenses, partnerships, awards, offices, reviews, or statistics.
-- Display real update timestamps only when they represent actual data or editorial events.
-- Clearly disclose sponsored and affiliate relationships.
-- Ensure privacy documentation reflects actual analytics, authentication, advertising, cookies, APIs, and third-party services.
-- Distinguish news, analysis, opinion, education, and sponsored content.
-- For financial information, communicate uncertainty and data limitations honestly.
+## Required Trust Surface
+Maintain accurate and accessible:
+- Hakkımızda
+- İletişim
+- Gizlilik Politikası
+- relevant Kullanım Koşulları
+- advertising/sponsorship disclosures when applicable
 
-Audit source provenance, contact paths, policy links, disclosure labels, and visible trust signals before release.
+## Data Provenance
+For market data identify source and status where useful: live, delayed, historical, updating, unavailable. Timestamps must represent actual retrieval or editorial events.
+
+## No Fake Authority
+Never invent licenses, regulators, partnerships, offices, awards, experts, analysts, authors, credentials, reviews, ratings, or statistics.
+
+## Editorial Transparency
+Distinguish news, analysis, opinion, educational content, sponsored content, and affiliate material. Do not disguise advertising as independent financial journalism.
+
+## Privacy Accuracy
+Privacy documentation must reflect actual analytics, authentication, cookies, advertising, APIs, hosting, storage, and third-party services. Do not claim “no data collected” when the implementation collects data.
+
+## Financial Trust
+Communicate data limitations and uncertainty honestly. Never make investment outcomes appear certain.
+
+## QA
+Before release inspect footer links, contact paths, policy pages, source attribution, visible timestamps, disclosures, and consistency between documentation and actual application behavior.
